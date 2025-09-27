@@ -30,3 +30,49 @@ paragraph = (
 )
 
 # Write descriptive print statements, with f-strings, that output the average vowels and consonants per sentence of the paragraph. 
+
+#--1--
+# def counting_vowels_and_consonants(paragraph):
+
+aha = paragraph.count('a').count('e')
+print(aha)
+
+# def counting_vowels_and_consonants(paragraph):
+#     a = paragraph.count('a')
+#     e = paragraph.count('e')
+#     i = paragraph.count('i')
+#     o = paragraph.count('o')
+#     u = paragraph.count('u')
+#     A = paragraph.count('A')
+#     E = paragraph.count('E')
+#     I = paragraph.count('I')
+#     O = paragraph.count('O')
+#     U = paragraph.count('U')
+#     vowels = a + e + i + o+u+A+E+I+O+U
+#     consonants = len(paragraph.replace(' ','')) - vowels
+#     return (vowels,consonants )
+# counting_vowels_and_consonants(paragraph)
+
+def counting_vowels_and_consonants(paragraph):
+    paragraph = paragraph.lower()
+    vowels = 'aeiou'
+    vowelct = sum(paragraph.count(v) for v in vowels)
+    consonants = len(paragraph.replace(' ', '')) - vowelct
+    return (vowelct, consonants)
+counting_vowels_and_consonants(paragraph)
+
+# --2--
+def average_vowels_and_consonants(paragraph):
+    import re
+    import numpy as np
+    sentences = re.split(r'(?<=[.!?])\s+', paragraph.strip())
+    vowelct = []
+    consonants = []
+    for s in sentences:
+        v,c = counting_vowels_and_consonants(s)
+        avgv = vowelct.append(v)
+        avgc = consonants.append(c)
+    avgv = np.average(vowelct)
+    avgc = np.average(consonants)
+    print(len(sentences), avgv, avgc)
+average_vowels_and_consonants(paragraph)
