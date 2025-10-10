@@ -1,0 +1,7 @@
+1. rocketry, exoplanets, black holes, stars, red/blueshifitng
+2. exoplanets: "exoplanetarchive.ipac.caltech.edu", exoplanet data including name, discovery information, specific informtation
+galaxies: distribution of nearyby galaxies in relation to the milky way's position
+ui.adsabs.harvard.edu/abs/2013AJ....145..101k/abstract
+stars: distribution of nearby stars/average density for each main element star consists of exoplanetarchive.ipac.caltech.edu
+3. Exoplanets - filtering through daa and comparing values. Finding values similar to earth? use python tables to rank in terms of habitability purely based on location and properties (ignoring composition and actual habitability)
+4. finding goldylocks zone for each general type of exoplanet. Looking for habitability based on all values, including planet composition. 
